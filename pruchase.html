@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="money.png" type="image/png">
+    <title>Reblu Run Password</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #c800ff, #00c8ff);
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #ffb370, #ff73ce);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            width: 400px;
+            height: 350px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #5e35b1;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #3aa040;
+        }
+        .password-input {
+            font-size: 1.2rem;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 80%;
+        }
+        .password-btn {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .password-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>!كلمة المرور رجاءً</h1>
+        <p>من فضلك أدخل كلمة المرور اذا قمت بشراء اللعبة، اطلبه اذا من صهيب نفسه</p>
+        <input id="password" class="password-input" placeholder="كلمة المرور">
+        <button class="password-btn" onclick="checkPassword()">تنزيل</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const enteredPassword = document.getElementById("password").value;
+            const correctPassword = "qr3zm57";
+
+            if (enteredPassword === correctPassword) {
+                location.href = 'reblu run setup.exe';
+            } else {
+                alert("كلمة المرور خاطئة. حاول مرة أخرى.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="rocket.png" type="image/png">
+    <title> Mini Pygames </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #c800ff, #00c8ff);
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #ffb370, #ff73ce);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            width: 1200px;
+            height: 700px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            color: #5e35b1;
+        }
+        p {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: #3aa040;
+        }
+        .games {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .game1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            background-color: rgba(240, 240, 240, 0.8);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+            height: 450pX;
+        }
+        .game1:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+        }
+        .game1 img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .game1 h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: #3aa040;
+        }
+        .game1 p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .game2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            background-color: rgba(240, 240, 240, 0.8);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+            height: 450pX;
+        }
+        .game2:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+        }
+        .game2 img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .game2 h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: #3aa040;
+        }
+        .game2 p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+        .game3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            background-color: rgba(240, 240, 240, 0.8);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+            height: 450pX;
+        }
+        .game3 img {
+            width: 165px;
+            height: 2650px;
+            border-radius: 15px;
+            object-fit: cover;
+            color: grey;
+        }.game3 h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: grey;
+        }
+        .game3 p {
+            font-size: 1.2rem;
+            color: grey;
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+        .purchase-btn3 {
+            font-size: 1.5rem;
+            padding: 15px 20px;
+            background-color: grey;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .purchase-btn {
+            font-size: 1.5rem;
+            padding: 15px 20px;
+            background-color: #5e35b1;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .purchase-btn:hover {
+            background-color: #7e57c2;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .game {
+                width: 100%;
+                max-width: 100%;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>!مرحبًا بك</h1>
+        <p>اختر اللعبة التي ترغب في تنزيلها</p>
+
+        <div class="games">
+            <div class="game1">
+                <img src="icon2.ico" alt="Reblu Run">
+                <h3>Reblu Run</h3>
+                <p>لعبة تنافسية مذهلة، كم ستصمد فيها؟</p>
+                <button class="purchase-btn" onclick="location.href='pruchase.html'">شراء</button>
+            </div>
+
+            <div class="game2">
+                <img src="icon1.ico" alt="Lightning Race">
+                <h3>Lightning Race</h3>
+                <p>لعبة سباق مجانية مليئة بالتحدي بانتظارك</p>
+                <button class="purchase-btn" onclick="location.href='lightning race setup.exe'">تنزيل</button>
+            </div>
+
+            <div class="game3">
+                <img src="qm.png" alt="Game 3">
+                <h3>Coming Soon</h3>
+                <p>!تجربة مذهلة ومغامرة جديدة بانتظارك</p>
+                <button class="purchase-btn3">قريباً</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
