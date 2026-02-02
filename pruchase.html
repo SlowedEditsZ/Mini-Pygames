@@ -12,13 +12,13 @@
             box-sizing: border-box;
         }
         body, html {
-            height: 100%;
+            min-height: 100%;
             font-family: 'Arial', sans-serif;
-            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             background: linear-gradient(135deg, #c800ff, #00c8ff);
+            padding: 20px; /* مسافة أمان للجوانب في الجوال */
         }
         .container {
             text-align: center;
@@ -26,31 +26,44 @@
             border-radius: 20px;
             background: linear-gradient(135deg, #ffb370, #ff73ce);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-            width: 400px;
-            height: 350px;
+            width: 100%;
+            max-width: 450px; /* العرض الأقصى ليبقى شكل المربع جميل */
+            min-height: auto; /* يتمدد حسب النص */
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: clamp(2rem, 8vw, 3rem); /* تصغير العنوان تلقائياً في الجوال */
             margin-bottom: 20px;
             color: #5e35b1;
         }
         p {
-            font-size: 1.5rem;
+            font-size: clamp(1.1rem, 4vw, 1.5rem); /* تصغير النص ليناسب عرض الشاشة */
             margin-bottom: 30px;
             color: #3aa040;
+            line-height: 1.5; /* تحسين المسافة بين الأسطر للقراءة */
         }
         .password-btn {
             font-size: 1.5rem;
-            padding: 10px 20px;
+            padding: 12px 30px;
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 10px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%; /* الزر يأخذ كامل العرض المتاح في الحاوية */
+            max-width: 200px;
         }
         .password-btn:hover {
             background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* تعديل بسيط للشاشات الصغيرة جداً */
+        @media (max-width: 400px) {
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
