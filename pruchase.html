@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,14 +40,6 @@
             margin-bottom: 30px;
             color: #3aa040;
         }
-        .password-input {
-            font-size: 1.2rem;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            width: 80%;
-        }
         .password-btn {
             font-size: 1.5rem;
             padding: 10px 20px;
@@ -64,23 +56,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>!كلمة المرور رجاءً</h1>
-        <p>من فضلك أدخل كلمة المرور اذا قمت بشراء اللعبة، اطلبه اذا من المطور نفسه</p>
-        <input id="password" class="password-input" placeholder="كلمة المرور">
-        <button class="password-btn" onclick="checkPassword()">تنزيل</button>
+        <h1>إتمام الشراء؟</h1>
+        <p>هذه اللعبة مدفوعة وسيطلب منك كلمة مرور، اطلبها من الطور (صهيب) لإتمام عملية الدفع</p>
+        <button class="password-btn" onclick='location.href="reblu run setup.exe"'>تنزيل</button>
     </div>
-
-    <script>
-        function checkPassword() {
-            const enteredPassword = document.getElementById("password").value;
-            const correctPassword = "qr3zm57";
-
-            if (enteredPassword === correctPassword) {
-                location.href = 'reblu run setup.exe';
-            } else {
-                alert("كلمة المرور خاطئة. حاول مرة أخرى.");
-            }
-        }
-    </script>
 </body>
 </html>
