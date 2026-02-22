@@ -12,13 +12,13 @@
             box-sizing: border-box;
         }
         body, html {
-            min-height: 100%; /* تغيير من height لـ min-height للسماح بالتمرير في الجوال */
+            min-height: 100%; 
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #c800ff, #00c8ff);
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px; /* مساحة أمان للشاشات الصغيرة */
+            padding: 20px; 
         }
         .container {
             text-align: center;
@@ -27,12 +27,12 @@
             background: linear-gradient(135deg, #ffb370, #ff73ce);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
             width: 100%; 
-            max-width: 1200px; /* العرض الأقصى 1200 لكن يسمح بالتقلص */
-            min-height: auto; /* يسمح للكونتينر بالتمدد حسب المحتوى */
+            max-width: 1200px; /* العرض الأقصى 1200 ممتاز جداً لترتيب 5 كروت (3 فوق و 2 تحت) */
+            min-height: auto; 
         }
 
         h1 {
-            font-size: clamp(2rem, 8vw, 4rem); /* حجم خط مرن يتغير حسب الشاشة */
+            font-size: clamp(2rem, 8vw, 4rem); 
             margin-bottom: 20px;
             color: #5e35b1;
         }
@@ -44,11 +44,10 @@
         .games {
             display: flex;
             justify-content: center;
-            gap: 20px; /* مسافة ثابتة بين الكروت */
-            flex-wrap: wrap; /* هذا هو السر: ينزل الكروت تحت بعض في الجوال */
+            gap: 20px; 
+            flex-wrap: wrap; 
         }
         
-        /* توحيد الـ Class للكروت لسهولة التعديل */
         .game-card {
             display: flex;
             flex-direction: column;
@@ -58,7 +57,7 @@
             border-radius: 15px;
             background-color: rgba(240, 240, 240, 0.8);
             transition: transform 0.3s, box-shadow 0.3s;
-            width: 300px; /* عرض ثابت للكرت */
+            width: 300px; 
             min-height: 450px;
         }
         
@@ -69,9 +68,9 @@
 
         .game-card img {
             width: 100%;
-            height: 200px; /* ارتفاع ثابت للصور لتوحيد الشكل */
+            height: 200px; 
             border-radius: 15px;
-            object-fit: contain; /* يحافظ على أبعاد الصورة الأصلية */
+            object-fit: contain; 
             margin-bottom: 15px;
         }
 
@@ -81,7 +80,6 @@
             color: #3aa040;
         }
 
-        /* تنسيق خاص للعبة القادمة (رمادي) */
         .coming-soon {
             filter: grayscale(1); 
             opacity: 0.8;
@@ -92,7 +90,7 @@
             color: #666;
             margin-bottom: 20px;
             text-align: center;
-            flex-grow: 1; /* يدفع الزر للأسفل دائماً */
+            flex-grow: 1; 
         }
 
         .purchase-btn {
@@ -114,10 +112,9 @@
 
         .btn-grey { background-color: grey; cursor: default; }
 
-        /* تعديلات خاصة للشاشات الصغيرة جداً */
         @media (max-width: 480px) {
             .container { padding: 15px; }
-            .game-card { width: 100%; } /* الكرت يأخذ كامل العرض في التلفون */
+            .game-card { width: 100%; } 
         }
     </style>
 </head>
@@ -145,6 +142,20 @@
                 <img src="qm.png" alt="Game 3">
                 <h3>Coming Soon</h3>
                 <p>!تجربة مذهلة ومغامرة جديدة بانتظارك</p>
+                <button class="purchase-btn btn-grey">قريباً</button>
+            </div>
+
+            <div class="game-card coming-soon">
+                <img src="qm.png" alt="Game 4">
+                <h3>Coming Soon</h3>
+                <p>!المزيد من التحديات والمرح في الطريق</p>
+                <button class="purchase-btn btn-grey">قريباً</button>
+            </div>
+
+            <div class="game-card coming-soon">
+                <img src="qm.png" alt="Game 5">
+                <h3>Coming Soon</h3>
+                <p>!مفاجأة أخرى نجهزها لك، ابقَ مترقباً</p>
                 <button class="purchase-btn btn-grey">قريباً</button>
             </div>
         </div>
